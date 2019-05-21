@@ -209,6 +209,12 @@
     
     }
     
+    UITapGestureRecognizer *singleFingerTap = [[UITapGestureRecognizer alloc] initWithTarget: self action: @selector(handleSingleTap:)];
+  [view addGestureRecognizer:singleFingerTap];
+}
+
+- (void)handleSingleTap:(UITapGestureRecognizer *)recognizer {
+  [self dismiss];
 }
 
 -(void)dismiss{
